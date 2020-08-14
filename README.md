@@ -1,1 +1,1 @@
-# Discourses-of-delay
+[# Discourses-of-delay](https://mcc-apsis.github.io/figures/figures.html)
