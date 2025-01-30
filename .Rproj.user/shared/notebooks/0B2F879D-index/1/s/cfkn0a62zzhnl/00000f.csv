@@ -1,0 +1,3 @@
+"0","  cat(paste0(""<img src='"", plot, ""' />""))
+"
+"1","<img src='plots/dod.png' />"
