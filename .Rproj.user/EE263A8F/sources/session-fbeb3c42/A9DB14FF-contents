@@ -1,0 +1,280 @@
+---
+title: "Discourses of Climate Delay"
+output: 
+  html_document:
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+
+library(knitr)
+library(tidyverse)
+library(openxlsx)
+knitr::opts_chunk$set(echo=FALSE)
+
+```
+
+``` {css}
+
+h1.title {
+  display: none;
+}
+
+.banner {
+  width: 100%;
+  height: 50px;
+  background-color: #008cba;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.banner a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.banner a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 70px 20px 20px 20px;
+  background-color: #f9f9f9;
+}
+
+.figure-container {
+  position: relative;
+  flex: 0 1 calc(50% - 20px);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.figure-container img {
+  max-width: 100%;              /* Scales image proportionally */
+  height: auto;
+  max-height: 300px;
+  margin-bottom: 10px;          /* Space below the image */
+  margin-top: 10px;
+}
+
+.figure-text {
+  font-size: 20px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+.figure-hover-grey {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey */
+  z-index: 1; /* Ensure it's below the white box */
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 5px;
+}
+
+.figure-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 80%;
+}
+
+.figure-container:hover .figure-hover-grey {
+  opacity: 1;
+}
+
+.figure-container:hover .figure-hover-text {
+  opacity: 1;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .figure-container {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .text-container {
+    width: 100%;
+    margin: 0 0 10px 0;
+    grid-column: span 1;     
+  }
+}
+
+.text-container {
+  width: 880px;
+  max-width: 100%;
+  margin: 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  text-align: left;
+  font-size: 16px;
+  grid-column: span 2;
+}
+
+.text-container p {
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.text-container h1 {
+  font-size: 18px;
+  margin-top: 0px;
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+}
+
+```
+
+``` {=html}
+
+
+<div class="banner">
+<div class="title">Discourses of Climate Delay</div>
+<div class="link"><a href="https://lambwf.github.io/">William F. Lamb</a>
+</div>
+</div>
+<div class='grid'>
+
+<div class="text-container">
+<h1>A brief history of Discourses of Climate Delay</h1>
+<p>2019 was an exciting time for many climate scientists and researchers. The kids were out protesting on the streets and we felt that finally climate change was getting the public attention it deserved. And it didn't seem like the usual hand wringing, two-sides discussion with an undertone that it can't be all that bad, but the beginnings of a grown-up conversation helped along by children telling us like it is.</p>
+
+<p>It was around this time that myself and a group of friends and colleagues started searching around for new language to describe an emerging form of climate denial. We had observed that many politicians and public commentators - often on the liberal end of the spectrum - would re-assure us during these discussions that they understood the science and impacts of climate change. But then in the same breath they would pour cold water on policies and actions to address it. Inspired by some Twitter conversations, we called this "climate delay" and set out to document the different types and flavours of arguments we had come across.</p>
+
+<p>The result was a commentary that we published in a new open access journal called Global Sustainability. We tried to situate our new concept within an established scholarship on climate denial and obstruction techniques, most famously represented by <i>The Merchants of Doubt</i> by Naomi Oreskes and Eric Conway. But at the same time, we wrote this piece for the public, and tried to make it as accessible as possible. That's why we drew a simple graphic to describe the concept, and tried to boil the arguments down to four main categories.</p>
+
+<p><a href="https://www.cambridge.org/core/journals/global-sustainability/article/discourses-of-climate-delay/7B11B722E3E3454BB6212378E32985A7">Discourses of climate delay - the article.</a></p>
+
+<p>To say the response was large is an understatement. Julia Steinberger posted about it on Twitter and the whole thing blew up. We have never seen anything like it. It was particularly surprising to see how the article is used by all kinds of groups, from activisits and communicators, to policy makers and academics. As you can see below, it has inspired art works, a comic book, a quiz and a museum exhibition. On social media it has been turned into a bingo card, has been translated into multiple languages, and adapted for other fields of public policy. Discourses of climate delay is continuously referred to in <a href="https://cambridge.altmetric.com/details/85028937/news">news articles and commentaries</a> and it remains one of my most highly cited articles in the academic literature.</p>
+
+</div>
+
+```
+
+
+```{r, results='asis'}
+
+content <- read.xlsx("content.xlsx")
+
+for (i in 1:length(content$title)) {
+  
+  plot <- paste0("plots/", content$plot[i])
+  link <- content$link[i]
+  hover_text <- content$hover_text[i]
+  
+  cat(paste0("<div class='figure-container'>"))
+  cat(paste0("<a href='", link, "' style='display: block; text-decoration: none;'>"))
+  
+  cat(paste0("<div class='figure-hover-grey'></div>"))
+  cat(paste0("<div class='figure-hover-text'>", hover_text, "</div>"))
+  
+  cat(paste0("<img src='", plot, "' />"))
+  cat("</a>")
+  cat("</div>")
+  
+}
+
+
+```
+
+``` {=html}
+
+<div class="text-container">
+<h1>Developments and further work</h1>
+<p>On reflection, it should be said that our original article does not contain significant empirical research - that's why we published it in the commentary section of the journal! It has therefore been gratifying to see dozens of articles coming out that analyse these discourses in <a href="https://www.nature.com/articles/s43247-023-00760-2">news media coverage of climate change</a>, in <a href="https://www.sciencedirect.com/science/article/pii/S2214629623000889">fossil industry messaging</a>, on <a href="https://link.springer.com/article/10.1007/s10584-023-03494-4">social media</a>, and in <a href="https://www.sciencedirect.com/science/article/pii/S2214629623000117?via%3Dihub">interviews and workshops</a>.</p>
+
+<p>One of the learnings here is that climate delay arguments intersect with all kinds of rhetorical devices, including omissions, distractions, and irrelevancies, but that they also often contain "grains of truth". What I mean is that they can be superficially convincing - aren't climate policies after all kind of inconvenient? - but only if you forget about the havok the climate change will play on our society and the promise of good solutions that will benefit all of us in the long run.</p>
+
+<p>If you are interested in more work in this area, I can recommend to follow work by <a href="https://scholar.google.com/citations?hl=en&user=ZEN_Z2UAAAAJ&view_op=list_works&sortby=pubdate">John Cook</a>, <a href="https://scholar.google.com/citations?hl=en&user=Bn1q3fYAAAAJ">Travis Coan</a>, <a href="https://scholar.google.com/citations?user=Cc7R0iIAAAAJ&hl=en">Constantine Boussalis</a> and <a href="https://scholar.google.com/citations?user=xQznf0kAAAAJ&hl=en">Mirjam Nanko</a>. This group published a <a href="https://www.nature.com/articles/s41598-021-01714-4">piece</a> around the same time as Discourses of Climate Delay with an extensive typology of contrarian claims, including "Climate solutions won't work" (see below). It's a neat organisation of climate delay-type arguments and it sets them in the context of other forms of denial. This overarching framework lets you analyse how claims from different categories trend and interact. Indeed, they showed that climate delay now supercedes climate denial on right wing think tank blogs. Travis and colleagues have trained a <a href="https://www.nature.com/articles/s43247-024-01573-7">model</a> to identify these claims and are now applying it to all types of data. 
+
+<p>
+</div>
+```
+
+```{r, results='asis'}
+
+content <- read.xlsx("content.xlsx",sheet = 2)
+
+for (i in 1:length(content$title)) {
+  
+  plot <- paste0("plots/", content$plot[i])
+  link <- content$link[i]
+  hover_text <- content$hover_text[i]
+  
+  cat(paste0("<div class='figure-container'>"))
+  cat(paste0("<a href='", link, "' style='display: block; text-decoration: none;'>"))
+  
+  cat(paste0("<div class='figure-hover-grey'></div>"))
+  cat(paste0("<div class='figure-hover-text'>", hover_text, "</div>"))
+  
+  cat(paste0("<img src='", plot, "' />"))
+  cat("</a>")
+  cat("</div>")
+  
+}
+
+```
+
+</div>
+
+``` {r, results='asis'}
+
+cat(paste0("<br><footer><p class='copyright'>© ",format(Sys.Date(), "%Y")," William F. Lamb</p></footer>"))
+
+```
