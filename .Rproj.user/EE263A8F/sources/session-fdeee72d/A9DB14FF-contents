@@ -236,13 +236,12 @@ for (i in 1:length(content$title)) {
 
 <div class="text-container">
 <h1>Developments and further work</h1>
-<p>On reflection, it should be said that our original article does not contain significant empirical research - that's why we published it in the commentary section of the journal! It has therefore been gratifying to see dozens of articles coming out that analyse these discourses in <a href="https://www.nature.com/articles/s43247-023-00760-2">news media coverage of climate change</a>, in <a href="https://www.sciencedirect.com/science/article/pii/S2214629623000889">fossil industry messaging</a>, on <a href="https://link.springer.com/article/10.1007/s10584-023-03494-4">social media</a>, and in <a href="https://www.sciencedirect.com/science/article/pii/S2214629623000117?via%3Dihub">interviews and workshops</a>.</p>
+<p>On reflection, it should be said that our original article does not contain significant empirical research - that's why we published it in the commentary section of the journal! Its therefore nice to see dozens of articles coming out that analyse these discourses in <a href="https://www.nature.com/articles/s43247-023-00760-2">news media coverage of climate change</a>, in <a href="https://www.sciencedirect.com/science/article/pii/S2214629623000889">fossil industry messaging</a>, on <a href="https://link.springer.com/article/10.1007/s10584-023-03494-4">social media</a>, and in <a href="https://www.sciencedirect.com/science/article/pii/S2214629623000117?via%3Dihub">interviews and workshops</a>.</p>
 
 <p>One of the learnings here is that climate delay arguments intersect with all kinds of rhetorical devices, including omissions, distractions, and irrelevancies, but that they also often contain "grains of truth". What I mean is that they can be superficially convincing - aren't climate policies after all kind of inconvenient? - but only if you forget about the havok the climate change will play on our society and the promise of good solutions that will benefit all of us in the long run.</p>
 
-<p>If you are interested in more work in this area, I can recommend to follow work by <a href="https://scholar.google.com/citations?hl=en&user=ZEN_Z2UAAAAJ&view_op=list_works&sortby=pubdate">John Cook</a>, <a href="https://scholar.google.com/citations?hl=en&user=Bn1q3fYAAAAJ">Travis Coan</a>, <a href="https://scholar.google.com/citations?user=Cc7R0iIAAAAJ&hl=en">Constantine Boussalis</a> and <a href="https://scholar.google.com/citations?user=xQznf0kAAAAJ&hl=en">Mirjam Nanko</a>. This group published a <a href="https://www.nature.com/articles/s41598-021-01714-4">piece</a> around the same time as Discourses of Climate Delay with an extensive typology of contrarian claims, including "Climate solutions won't work" (see below). It's a neat organisation of climate delay-type arguments and it sets them in the context of other forms of denial. This overarching framework lets you analyse how claims from different categories trend and interact. Indeed, they showed that climate delay now supercedes climate denial on right wing think tank blogs. Travis and colleagues have trained a <a href="https://www.nature.com/articles/s43247-024-01573-7">model</a> to identify these claims and are now applying it to all types of data. 
+<p>If you are interested in more work in this area, I can recommend to follow work by <a href="https://scholar.google.com/citations?hl=en&user=ZEN_Z2UAAAAJ&view_op=list_works&sortby=pubdate">John Cook</a>, <a href="https://scholar.google.com/citations?hl=en&user=Bn1q3fYAAAAJ">Travis Coan</a>, <a href="https://scholar.google.com/citations?user=Cc7R0iIAAAAJ&hl=en">Constantine Boussalis</a> and <a href="https://scholar.google.com/citations?user=xQznf0kAAAAJ&hl=en">Mirjam Nanko</a>. This group published a <a href="https://www.nature.com/articles/s41598-021-01714-4">piece</a> around the same time as Discourses of Climate Delay with an extensive typology of contrarian claims, including "Climate solutions won't work" (see below). It's a neat organisation of climate delay-type arguments and it sets them in the context of other forms of denial, letting you analyse how claims from different categories trend and interact. They showed that climate delay now supercedes climate denial on right wing think tank blogs, and have trained a <a href="https://www.nature.com/articles/s43247-024-01573-7">model</a> to automatically classify claims, which they are now applying to many different types of data. </p>
 
-<p>
 </div>
 ```
 
@@ -269,6 +268,21 @@ for (i in 1:length(content$title)) {
 }
 
 ```
+
+``` {=html}
+
+<div class="text-container">
+<h1>Critiques</h1>
+<p>One of the critiques of this piece is that its not always obvious whether someone <i>intends</i> to delay climate policy or not. A good example is when social justice aspects of climate policies are discussed. Naturally, we should be able to reflect on how to make policies more fair and effective. On the other hand, it could be that interest groups aligned with the fossil industry purposefully problematize justice aspects of climate policies, just to discourage us from implementing them.</p>
+
+<p>I think this is a fair critique. Its one of the reasons why we tried to situate our article in the literature on climate obstruction and interest group opposition to climate policy, and not in the literature on public deliberation. Intuitively, we understood that it matters who is propagating climate delay discourses, and in what contexts. The appeal to social justice has a different flavour if it is used by an oil executive, versus a community leader, for example.</p>
+
+<p>Still, the question is how to deal with this issue in practice. The nice thing about Discourses of Climate Delay is that its easy to use as a basic mental framework in everyday life. So it would be great to see research and suggestions on how to evaluate 'intent' and 'context' (<a href="https://www.cambridge.org/core/journals/global-sustainability/article/contextualizing-discourses-of-climate-delay-a-response-to-lamb-et-al-2020/19B61778E8D8DDCE1D18D513D14FA323">as suggested here</a>), that people can apply in their discussions and interactions around climate change.</p>
+
+</div>
+```
+
+
 
 </div>
 
