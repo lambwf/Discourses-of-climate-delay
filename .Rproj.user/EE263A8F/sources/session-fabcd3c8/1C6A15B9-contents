@@ -103,12 +103,12 @@ body {
   box-sizing: border-box;
   background-color: white;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   grid-column: span 2;
 }
 
 .text-container h1 {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: bold;
@@ -186,11 +186,15 @@ filenames <- c(
   "results/standard/UNEP-EGR-2024-total-gas-trend.svg",
   "results/standard/UNEP-EGR-2024-total-uncertainties.svg",
   "results/standard/UNEP-EGR-2024-total-sector-trend.svg",
+  "results/standard/UNEP-EGR-2024-total-fossil.svg",
   "results/standard/UNEP-EGR-2024-total-luc-differences.svg",
   "results/standard/UNEP-EGR-2024-top-contribution.svg",
   "results/standard/UNEP-EGR-2024-top-shares.svg",
+  "results/standard/UNEP-EGR-2024-G20-shares.svg",
   "results/standard/UNEP-EGR-2024-top-trend-exLUC.svg",
-  "results/standard/UNEP-EGR-2024-top-percapita-exLUC.svg")
+  "results/standard/UNEP-EGR-2024-top-percapita-exLUC.svg",
+  "results/standard/UNEP-EGR-2024-percapita-change.svg",
+  "results/standard/UNEP-EGR-2024-trend-with-lulucf.svg")
 
 
 for (file in filenames) {
@@ -205,8 +209,15 @@ for (file in filenames) {
 
   link_svg <- paste0("<a target='_blank' href='https://github.com/lambwf/UNEP-Gap-Report-2024-Chapter-2/raw/main/results/standard/", plot, ".svg'>svg</a>")
   
+  svg_content <- readLines(file, warn = FALSE)
+  svg_content <- paste(svg_content, collapse = "\n")
+
   cat("<div class='figure-container'>")
-  cat(paste0("<img src='", file, "' alt='", plot, "' />"))
+  #cat("<![CDATA[")
+  cat(svg_content)
+  
+  #cat("<div class='figure-container'>")
+  #cat(paste0("<img src='", file, "' alt='", plot, "' />"))
   cat(paste0("<div class='figure-text'>", link_data, " | ", link_png, " | ", link_pdf, " | ", link_svg, "</div>"))
   cat("</div>")
 
@@ -245,8 +256,17 @@ for (file in filenames) {
 
   link_svg <- paste0("<a target='_blank' href='https://github.com/lambwf/UNEP-Gap-Report-2024-Chapter-2/raw/main/results/standard/countries/", plot, ".svg'>svg</a>")
   
+  
+  svg_content <- readLines(file, warn = FALSE)
+  svg_content <- paste(svg_content, collapse = "\n")
+
   cat("<div class='figure-container'>")
-  cat(paste0("<img src='", file, "' alt='", plot, "' />"))
+  #cat("<![CDATA[")
+  cat(svg_content)
+   
+   
+  # cat("<div class='figure-container'>")
+  # cat(paste0("<img src='", file, "' alt='", plot, "' />"))
   cat(paste0("<div class='figure-text'>", link_data, " | ", link_png, " | ", link_pdf, " | ", link_svg, "</div>"))
   cat("</div>")
 
